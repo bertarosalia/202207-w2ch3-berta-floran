@@ -1,8 +1,5 @@
-
-//Calculadora pro
-  
     let newNumber; 
-    let numberList=[];
+    const numberList=[];
     let resultSum;
     let resultRest;
     let resultMult;
@@ -12,7 +9,7 @@
       
     do { 
       newNumber = prompt("Ingrese un número o presione cancelar para detener"); 
-      let newNumber1= parseFloat(newNumber);
+      const newNumber1= parseFloat(newNumber);
 
       if (Number.isNaN(newNumber1) && newNumber !== null){
         alert("Valor no válido. Introduce un número")
@@ -22,13 +19,13 @@
       }
        } while  (newNumber !== null);
 
-       resultSum = numberList[0];
-       resultRest= numberList[0];
-       resultMult= numberList[0];
-       resultDiv= numberList [0];
+       resultSum = [numberList[0]];
+       resultRest= [numberList[0]];
+       resultMult= [numberList[0]];
+       resultDiv= [numberList [0]];
       
       if(numberList.length === 1){
-        let raizCuadrada = Math.sqrt(parseFloat(numberList)).toFixed(3);
+        const raizCuadrada = Math.sqrt(parseFloat(numberList)).toFixed(3);
         console.log (`La raíz cuadrada de ${numberList}es ${raizCuadrada}`)
             
       } else {
@@ -61,8 +58,10 @@ let moreNumbers = confirm ("¿Desea realizar más operaciones?");
         break;
         case false: 
         alert("Hasta otra!")
-        break;
-    }
+        break
+        default
+
+        }   
   }
   newOperations();
   
